@@ -85,6 +85,7 @@ py-cpuinfo	≥8.0.0	CPU identification
 tabulate	≥0.8.9	Beautiful console output
 Install with:
 
+
 bash
 
 pip install -r requirements.txt

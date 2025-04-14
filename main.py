@@ -207,6 +207,7 @@ def display_gui_report():
     root.mainloop()
 
 
+
 if __name__ == "__main__":
     # Check for admin privileges (recommended for temperature readings)
     if not psutil.WINDOWS and os.geteuid() != 0:
