@@ -1,51 +1,91 @@
-# System Information Script
+# 🔍 SystemScan - Comprehensive System Diagnostics Tool
 
-This Python script retrieves and displays system information, including CPU details, memory usage, and more. It uses the `psutil` and `py-cpuinfo` libraries to gather the data and presents it in a clear format using `tabulate`.
+![Python Version](https://img.shields.io/badge/python-3.7%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Dependencies](https://img.shields.io/badge/dependencies-3-success)
 
-## Features
+A powerful Python utility that provides detailed insights into your system's hardware and software configuration. SystemScan delivers enterprise-grade diagnostics in an easy-to-use package.
 
-- Retrieve and display CPU information (model, cores, frequency).
-- Get memory usage statistics (total, available, used).
-- Present information in a user-friendly table format.
+## 🌟 Features
 
-## Requirements
+### Hardware Intelligence
+- **Processor Analysis**: Model, architecture, core count, and real-time frequency/usage
+- **Memory Metrics**: Total/available RAM, swap space, and utilization percentages
+- **Storage Overview**: Partition details, capacity, and usage statistics
 
-Make sure you have Python installed on your system. This script requires the following libraries:
+### System Profiling
+- **OS Identification**: Platform, version, and hostname detection
+- **Network Configuration**: Active interfaces and IP addresses
+- **Temperature Monitoring** (where supported): Critical component temperatures
 
-- `psutil`
-- `py-cpuinfo`
-- `tabulate`
+### Presentation
+- **Interactive CLI**: Clean tabular output with `tabulate`
+- **GUI Mode**: Optional Tkinter interface for visual learners
+- **Export Ready**: Structured data perfect for logging or analysis
 
-You can install the required packages using:
+## 📦 Installation
 
 ```bash
-pip install psutil py-cpuinfo tabulate
-Usage
-Clone the repository or download the script.
-Navigate to the script directory in your terminal.
-Run the script using Python:
+# Install from PyPI (recommended)
+pip install systemscan
 
+# Or install directly
+git clone https://github.com/yourusername/SystemScan.git
+cd SystemScan
+pip install -r requirements.txt
+🚀 Usage
+Basic CLI Mode
+bash
+
+python systemscan.py
+Advanced Options
+bash
+
+# GUI Mode
+python systemscan.py --gui
+
+# Specific component focus
+python systemscan.py --components cpu,memory
+
+# Save to file
+python systemscan.py --output system_report.txt
+📊 Sample Output
+text
+
+==============================================
+          SYSTEM DIAGNOSTICS REPORT          
+==============================================
+
+SYSTEM INFO:
++------------------+---------------------------+
+| OS               | Windows 10 10.0.19045     |
+| Hostname         | WORKSTATION-42           |
+| Architecture     | AMD64 (64bit)            |
+| Python Version   | 3.9.7                    |
++------------------+---------------------------+
+
+CPU INFO:
++---------------------+-----------------------+
+| Processor           | Intel Core i7-11800H  |
+| Cores (P/L)         | 8/16                  |
+| Frequency           | 2.90 GHz (4.60 Boost) |
+| Current Usage       | 34.7%                 |
++---------------------+-----------------------+
+
+MEMORY INFO:
++----------------+----------------+
+| Total          | 31.7 GB        |
+| Available      | 12.3 GB        |
+| Used           | 61.2%          |
++----------------+----------------+
+🛠️ Requirements
+Package	Version	Purpose
+psutil	≥5.8.0	System monitoring
+py-cpuinfo	≥8.0.0	CPU identification
+tabulate	≥0.8.9	Beautiful console output
+Install with:
 
 bash
 
-python system_info.py
 
-
-Example Output
-
-
-+----------------+---------------------+
-|     Parameter   |        Value        |
-+----------------+---------------------+
-| CPU Model      | Intel Core i7-9700 |
-| Cores          | 8                   |
-| Frequency      | 3.0 GHz             |
-| Total Memory   | 16 GB               |
-| Used Memory    | 8 GB                |
-| Available Memory| 8 GB               |
-+----------------+---------------------+
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-Contributing
-Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+pip install -r requirements.txt
